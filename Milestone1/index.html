@@ -55,17 +55,18 @@
       <!-- chat-list -->
       <div class="chat-list">
         <ul>
-          <li>
-            <div class="contacts">
-              <img src="img/avatar_1.jpg" alt="nome">
+          <li
+          v-for="(contact, index) in contacts">
+            <div class="contatti">
+              <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
               <div class="contact-info">
-                <h4>Michele</h4>
-                <span>Ultimo messaggio inviato</span>
+                <h4>{{contact.name}}</h4>
+                <span>{{contact.message[contact.messages.length-1].date}}</span>
               </div>
             </div>
 
             <div class="last-access">
-              <span>12:00</span>
+              <span>{{contact.message[0].date}}</span>
             </div>
           </li>
         </ul>
