@@ -56,17 +56,17 @@
       <div class="chat-list">
         <ul>
           <li
-          v-for="(contact, index) in contacts">
+          v-for="contact in contacts">
             <div class="contatti">
-              <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+              <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
               <div class="contact-info">
                 <h4>{{contact.name}}</h4>
-                <span>{{contact.message[contact.messages.length-1].date}}</span>
+                <span>{{contact.messages[contact.messages.length-1].date}}</span>
               </div>
             </div>
 
             <div class="last-access">
-              <span>{{contact.message[0].date}}</span>
+              <span>{{contact.messages.date}}</span>
             </div>
           </li>
         </ul>
