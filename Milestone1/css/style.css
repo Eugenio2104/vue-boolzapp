@@ -175,12 +175,32 @@ body{
   height: calc(100% - 140);
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .message{
   border-radius: 10px;
-  width:50px;
-  background-color: #009688;
+  width:30%;
+  padding: 10px 10px;
+  margin:2px;
+}
+
+
+.message span{
+  float: right;
+  font-size: .5rem;
+  color: rgb(199, 198, 198);
+}
+
+.message.message-right{
+  align-self: flex-end;
+  margin-right: 10%;
+  background-color: #D5F9BA;
+}
+
+.message.message-left{
+  margin-left: 10%;
+  background-color:#FFFFFF ;
 }
 
 /*write msg*/
