@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container" id="app">
+    <!-- left part -->
+    <div class="left">
+
+      <!-- header left -->
+      <div class="header header-left">
+        <div class="personal-account">
+          <img src="img/avatar_8.jpg" alt="me">
+          <h4>Eugenio</h4>
+        </div>
+        <div class="icons-left">
+          <i class="fas fa-circle-notch"></i>
+          <i class="fa-solid fa-message"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+
+        </div>
+      </div>
+
+      <!-- active notifications -->
+      <div class="notifications">
+        <div class="bell">
+          <i class="fa-solid fa-bell-slash"></i>
+        </div>
+
+        <div class="text">
+          <p>Ricevi notifiche di nuovi messaggi</p>
+          <a href="#">Attiva notifiche desktop</a>
+        </div>
+
+      </div>
+
+      <!-- search chat -->
+      <div class="chat-search">
+        <span class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input type="text" placeholder="Cerca o inizia una nuova chat">
+      </div>
+      
+      <!-- chat-list -->
+      <div class="chat-list">
+        <ul>
+          <li
+          v-for="contact in contacts">
+            <div class="contatti">
+              <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
+              <div class="contact-info">
+                <h4>{{contact.name}}</h4>
+                <span>{{contact.messages[contact.messages.length-1].date}}</span>
+              </div>
+            </div>
+
+            <div class="last-access">
+              <span>{{contact.messages.date}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- chat right -->
+    <div class="right">
+      <div class="header header-right">
+        <div class="opened-chat">
+          <img src="img/avatar_1.jpg" alt="Michele">
+          <div class="name-friend">
+            <h4>Michele</h4>
+            <span>Ultimo accesso oggi alle 12:00</span>
+          </div>
+        </div>
+
+        <div class="icons-right">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+
+
+      <!-- messages -->
+      <div class="message-container">
+        <div class="message message-right">
+          <p>ciao come stai?</p>
+          <span>10:00</span>
+        </div>
+        <div class="message message-right">
+          <p>ciao come stai?</p>
+          <span>10:00</span>
+        </div>
+        <div class="message message-left">
+          <p>tutto bene</p>
+          <span>10:05</span>
+        </div>
+      </div>
+      <!-- chat input -->
+      <div class="msg-input">
+        <i class="fa-regular fa-face-smile"></i>
+        <input type="text" placeholder="Scrivi un messaggio">
+        <i class="fa-solid fa-microphone"></i>
+      </div>
+
+
+    </div>
+
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
