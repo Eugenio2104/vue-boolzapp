@@ -58,7 +58,7 @@
           <li
           v-for="contact in contacts">
             <div class="contatti">
-              <img :src="`img/avatar${contact.avatar}.jpg`" alt="">
+              <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
               <div class="contact-info">
                 <h4>{{contact.name}}</h4>
                 <span>{{contact.messages[contact.messages.length-1].date}}</span>
@@ -92,6 +92,18 @@
         </div>
       </div>
 
+
+      <!-- messages -->
+      <div class="message-container">
+        <div class="message message-right">
+          <p>ciao come stai?</p>
+          <span>10:00</span>
+        </div>
+        <div class="message message-left">
+          <p>tutto bene</p>
+          <span>10:05</span>
+        </div>
+      </div>
       <!-- chat input -->
       <div class="msg-input">
         <i class="fa-regular fa-face-smile"></i>
