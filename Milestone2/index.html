@@ -95,19 +95,17 @@
 
       <!-- messages -->
       <div class="message-container">
-        <div class="message message-right">
-          <p>ciao come stai?</p>
-          <span>10:00</span>
+        <div 
+        v-for="chat in contacts[2].messages"
+        class="message message-right">
+          <p>{{chat.message}}</p>
+          <span>{{chat.date}}</span>
         </div>
-        <div class="message message-right">
-          <p>ciao come stai?</p>
-          <span>10:00</span>
-        </div>
-        <div class="message message-left">
-          <p>tutto bene</p>
-          <span>10:05</span>
-        </div>
-      </div>
+        <!-- <div class="message message-left">
+          <p>{{chat.message}}</p>
+          <span>{{chat.date}}</span>
+        </div> -->
+      </div> 
       <!-- chat input -->
       <div class="msg-input">
         <i class="fa-regular fa-face-smile"></i>
