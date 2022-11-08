@@ -172,7 +172,7 @@ body{
 /*messages*/
 
 .message-container{
-  height: calc(100% - 140);
+  height: calc(100% - 140px);
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
