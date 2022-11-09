@@ -10,6 +10,7 @@ createApp({
     return{
       activeChat: 0,
       newMessage :"",
+      search:"",
       contacts: [
         {
         name: 'Michele',
@@ -195,6 +196,7 @@ createApp({
         status: 'received'
       }
       this.contacts[this.activeChat].messages.push(botMessage)
-    }
+    },
+
   },
 }).mount('#app')

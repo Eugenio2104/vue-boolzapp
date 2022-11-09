@@ -49,7 +49,9 @@
         <span class="search-icon">
           <i class="fa-solid fa-magnifying-glass"></i>
         </span>
-        <input type="text" placeholder="Cerca o inizia una nuova chat">
+        <input 
+        v-model="search"
+        type="text" placeholder="Cerca o inizia una nuova chat">
       </div>
       
       <!-- chat-list -->
@@ -57,7 +59,8 @@
         <ul>
           <li
           v-for="(contact, index) in contacts"
-          @click="activeChat =  index">
+          @click="activeChat =  index"
+          v-show="contact.name.toLowerCase().includes(search.toLowerCase())">
             <div class="contatti">
               <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name">
               <div class="contact-info">
