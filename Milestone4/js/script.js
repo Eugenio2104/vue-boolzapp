@@ -190,12 +190,12 @@ createApp({
     },
 
     botMsg(){
-      const botMessage = {
+      const autoMessage = {
         date:'14:19',
         message: 'OK',
         status: 'received'
       }
-      this.contacts[this.activeChat].messages.push(botMessage)
+      this.contacts[this.activeChat].messages.push(autoMessage)
     }
   },
 }).mount('#app')
